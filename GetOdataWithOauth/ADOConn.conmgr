@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ADOConn"
+  DTS:DTSID="{FFC49ADA-D742-4D20-B10E-448849B72C13}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=slondev2\sql2016;Initial Catalog=HK2;Integrated Security=True;Application Name=SSIS-GetOdataWithOauth-{FFC49ADA-D742-4D20-B10E-448849B72C13}slondev2\sql2016.HK2;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
