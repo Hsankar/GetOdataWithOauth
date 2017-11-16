@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/9/2017 1:06:26 PM"
@@ -12,7 +12,7 @@
   DTS:ObjectName="GetAccessTokenFromAutorizationCode"
   DTS:PackageType="5"
   DTS:VersionBuild="3"
-  DTS:VersionGUID="{7BB7E057-A592-4CC8-91DD-73F8BB76EEA9}">
+  DTS:VersionGUID="{543C9E76-AC4B-451B-A4B9-A45E323C4258}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
