@@ -12,22 +12,10 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="LoadMatterActuals"
   DTS:PackageType="5"
-  DTS:VersionBuild="93"
-  DTS:VersionGUID="{C18DA2B4-E61E-4CBD-B986-A68F4EDF01B8}">
+  DTS:VersionBuild="101"
+  DTS:VersionGUID="{60A60BA9-8EEC-4FDE-BD23-BA743760057D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[slondev2\sql2016.HK2]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{A7F847B5-1F7E-4F0D-8CF6-2D03E65D30CC}"
-      DTS:ObjectName="slondev2\sql2016.HK2">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=slondev2\sql2016;Initial Catalog=HK2;Integrated Security=True;Application Name=SSIS-LoadMatterActuals-{A7F847B5-1F7E-4F0D-8CF6-2D03E65D30CC}slondev2\sql2016.HK2;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -156,12 +144,12 @@
       DTS:CreationName=""
       DTS:DTSID="{3BA6CB57-F85E-4451-B2F6-BF2709B6E0E1}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="@[User::BaseUrl]+&quot;&amp;$filter=ProjTransDate ge &quot;+ @[User::ProjMaxDateTime] +&quot;&amp;$count=true&amp;$orderby=ProjTransDate,ProjId&quot;"
+      DTS:Expression="@[User::BaseUrl]+&quot;&amp;$filter=ProjTransDate ge &quot;+ @[User::ProjMaxDateTime] +&quot;&amp;$count=true&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="WebMethod">
       <DTS:VariableValue
-        DTS:DataType="8">https://fieldfisher-test01.sandbox.operations.dynamics.com/data/Integration_V0_MatterActuals?cross-company=true&amp;$filter=ProjTransDate ge 2017-06-01T12:00:00Z&amp;$count=true&amp;$orderby=ProjTransDate,ProjId</DTS:VariableValue>
+        DTS:DataType="8">https://fieldfisher-test01.sandbox.operations.dynamics.com/data/Integration_V0_MatterActuals?cross-company=true&amp;$filter=ProjTransDate ge 2017-06-01T12:00:00Z&amp;$count=true</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -246,7 +234,7 @@
               VSTAMajorVersion="15"
               VSTAMinorVersion="0"
               Language="CSharp"
-              ReadOnlyVariables="User::GetAccessToken,User::NewExecutionID,User::WebMethod"
+              ReadOnlyVariables="User::GetAccessToken,User::NewExecutionID,User::WebMethod,$Project::ppDLLPath,$Project::ppRestsharpDLLName,$Project::ppNewtonJsonDLLName"
               ReadWriteVariables="User::JSON_Data,User::PageSize,User::RowCount,User::SkipPages,User::WebMethod_NextLink">
               <ProjectItem
                 Name="ST_5fb8622b26cd41beb4b1f52a3f8363bc.csproj"
@@ -695,7 +683,7 @@ namespace ST_a1fee0f727294c9189165e4ae64ef2db
 		<msb:CodeName>ST_5fb8622b26cd41beb4b1f52a3f8363bc</msb:CodeName>
 		<msb:Language>msBuild</msb:Language>
 		<msb:DisplayName>ST_5fb8622b26cd41beb4b1f52a3f8363bc</msb:DisplayName>
-		<msb:ProjectId>{C6DC544F-5845-4DB9-B217-1D35D9B5C90A}</msb:ProjectId>
+		<msb:ProjectId>{D45E0CBE-738A-43EF-AE86-4BF96D8E49F3}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="ST_5fb8622b26cd41beb4b1f52a3f8363bc.csproj"/>
@@ -707,17 +695,6 @@ namespace ST_a1fee0f727294c9189165e4ae64ef2db
 		<msb:File Include="packages.config"/>
 		<msb:File Include="app.config"/>
 		<msb:File Include="ScriptMain.cs"/>
-		<msb:Breakpoint Include="94e70d3f22664c819b85f8fe1ca19cc0">
-			<msb:FileName>ScriptMain.cs</msb:FileName>
-			<msb:ColumnNumber>3</msb:ColumnNumber>
-			<msb:Enabled>True</msb:Enabled>
-			<msb:LineNumber>70</msb:LineNumber>
-			<msb:Condition></msb:Condition>
-			<msb:ConditionType>1</msb:ConditionType>
-			<msb:Language>C#</msb:Language>
-			<msb:HitCountType>1</msb:HitCountType>
-			<msb:HitCountTarget>1</msb:HitCountTarget>
-		</msb:Breakpoint>
 	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
@@ -828,7 +805,7 @@ namespace ST_a1fee0f727294c9189165e4ae64ef2db.Properties {
               <BinaryItem
                 Name="ST_5fb8622b26cd41beb4b1f52a3f8363bc.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAP+8DVoAAAAAAAAAAOAAIiALATAAAB4AAAAIAAAAAAAAUjwA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDANvLDVoAAAAAAAAAAOAAIiALATAAAB4AAAAIAAAAAAAAUjwA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAAA8AABPAAAAAEAAAIQEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -884,8 +861,8 @@ ASUEoQCZACsBqQCBAJMETgCZALkITgApATcErgBxAWAIswCpAFUFuACBATsEvwAhAfEG1QCRAWUC
 AfcICAGhAQIGrgCBABAHBgC5AX0BDAG5AeoIFQHZABAHGgEJARAHBgDJAfIAIQEIABQATgEIABgA
 UwEpAHMAwwEuAAsAmwEuABMApAEuABsAwwEuACMAzAEuACsA9QEuADMA9QEuADsA+wEuAEMAzAEu
 AEsABAIuAFMA9QEuAFsAHgJDAGMAUwFJAHMAwwFjAGsAUwGDAHsAUwGDAIMAaAI0AGMA4wADAAEA
-BAADAAAAjwaMAQAABgKRAQAAgQiWAQIABwADAAIACAAFAAEACQAFAAIACgAHAASAAAABAAAAgRn/
-cwAAAAAAALMAAAAEAAAAAAAAAAAAAAAqAaoAAAAAAA4AAAAAAAAAAAAAADMBqAQAAAAAagAAAAAA
+BAADAAAAjwaMAQAABgKRAQAAgQiWAQIABwADAAIACAAFAAEACQAFAAIACgAHAASAAAABAAAAgRlt
+ewAAAAAAALMAAAAEAAAAAAAAAAAAAAAqAaoAAAAAAA4AAAAAAAAAAAAAADMBqAQAAAAAagAAAAAA
 AAAAAAAAPAFbBgAAAAAEAAAAAAAAAAAAAAAqAV4FAAAAAAgAAAAAAAAAAAAAAEUBPwYAAAAADgAA
 AAAAAAAAAAAAMwFTAAAAAAAEAAAAAAAAAAAAAAAqAXoAAAAAAAAAAAABAAAAYQcAAAUAAgBZAM0A
 WQDRAAAAAElFbnVtZXJhYmxlYDEAQ3VycmVudERvbWFpbl9Bc3NlbWJseVJlc29sdmUxAEludDMy
@@ -944,8 +921,8 @@ dABMAGkAbgBrAAApVQBzAGUAcgA6ADoAUgBlAHMAcABvAG4AYwBlAFMAdABhAHQAdQBzAAAPQQBE
 AE8AQwBvAG4AbgAATUUAWABFAEMAVQBUAEUAIABbAGUAdABsAF0ALgBbAHUAcwBwAF8ARQBUAEwA
 XwBFAHIAcgBvAHIATABvAGcAZwBpAG4AZwBdACAAJwABBycALAAnAAEDJwABcVMAVABfAGEAMQBm
 AGUAZQAwAGYANwAyADcAMgA5ADQAYwA5ADEAOAA5ADEANgA1AGUANABhAGUANgA0AGUAZgAyAGQA
-YgAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAADvZuefNswdAgqhp
-KIgFe0UABCABAQgDIAABBSABARERBCABAQ4FIAEBEXUFIAIBDg4FAAASgIkFIAIBHBgGIAEBEoCN
+YgAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAFoISlIV5ptLtCBz
+cTacSesABCABAQgDIAABBSABARERBCABAQ4FIAEBEXUFIAIBDg4FAAASgIkFIAIBHBgGIAEBEoCN
 AwcBDgUgABKAkQQgABJZBiABEoCVHAMgABwDIAAOBCABAg4FAAIODg4FAAESPQ4bBxIODg4ODggI
 CA4SSRJNEVEOElUSWQ4SWRJdBQACAg4OBQABDh0cBgABARGAqQYgAQERgLEHIAISgLUODgcgARJN
 EoC1BCAAEVEEIAEBHAQAARwOBiABEoC9Dg0QAQEeABUSgMUBEoC9AwoBCAMKAQ4FIAASgMkHIAIB
@@ -972,14 +949,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA
 EAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgAAABY
 QAAAJgQAAAAAAAAAAAAAJgQ0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E
-7/4AAAEAAAABAP9zgRkAAAEA/3OBGT8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBW
+7/4AAAEAAAABAG17gRkAAAEAbXuBGT8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBW
 AGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAAAAAA
 AACwBIYDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAGIDAAABADAAMAAwADAAMAA0
 AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAoAAQAAQBDAG8AbQBwAGEAbgB5AE4A
 YQBtAGUAAAAAAEYARgBXAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAA
 AFMAVABfAGEAMQBmAGUAZQAwAGYANwAyADcAMgA5ADQAYwA5ADEAOAA5ADEANgA1AGUANABhAGUA
 NgA0AGUAZgAyAGQAYgAAAD4ADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgA2
-ADUAMgA5AC4AMgA5ADYAOQA1AAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMA
+ADUAMgA5AC4AMwAxADUAOQA3AAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMA
 VABfADUAZgBiADgANgAyADIAYgAyADYAYwBkADQAMQBiAGUAYgA0AGIAMQBmADUAMgBhADMAZgA4
 ADMANgAzAGIAYwAuAGQAbABsAAAATgAVAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAA
 QwBvAHAAeQByAGkAZwBoAHQAIABAACAARgBGAFcAIAAyADAAMQA3AAAAAAAqAAEAAQBMAGUAZwBh
@@ -988,8 +965,8 @@ bABlAG4AYQBtAGUAAABTAFQAXwA1AGYAYgA4ADYAMgAyAGIAMgA2AGMAZAA0ADEAYgBlAGIANABi
 ADEAZgA1ADIAYQAzAGYAOAAzADYAMwBiAGMALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQA
 TgBhAG0AZQAAAAAAUwBUAF8AYQAxAGYAZQBlADAAZgA3ADIANwAyADkANABjADkAMQA4ADkAMQA2
 ADUAZQA0AGEAZQA2ADQAZQBmADIAZABiAAAAQgAPAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkA
-bwBuAAAAMQAuADAALgA2ADUAMgA5AC4AMgA5ADYAOQA1AAAAAABGAA8AAQBBAHMAcwBlAG0AYgBs
-AHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgA2ADUAMgA5AC4AMgA5ADYAOQA1AAAAAAAAAAAA
+bwBuAAAAMQAuADAALgA2ADUAMgA5AC4AMwAxADUAOQA3AAAAAABGAA8AAQBBAHMAcwBlAG0AYgBs
+AHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgA2ADUAMgA5AC4AMwAxADUAOQA3AAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1006,11 +983,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
-              <Breakpoint
-                Enabled="True"
-                File="ScriptMain.cs"
-                Line="70"
-                Column="3" />
             </ScriptProject>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -1027,7 +999,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{A7F847B5-1F7E-4F0D-8CF6-2D03E65D30CC}"
+              SQLTask:Connection="{FFC49ADA-D742-4D20-B10E-448849B72C13}"
               SQLTask:SqlStatementSource="SELECT &#xA; @paramaccesstoken = [ConnectionToken],&#xA; @paramrefreshtoken = [RefreshToken], &#xA; @paramexpirationdate = [ConnectionTokenExpirationDate]&#xA;FROM &#xA; [dbo].[OAuth2] &#xA;WHERE &#xA; [InstanceName] = 'TEST01'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="@paramaccesstoken"
@@ -1063,7 +1035,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{A7F847B5-1F7E-4F0D-8CF6-2D03E65D30CC}"
+              SQLTask:Connection="{FFC49ADA-D742-4D20-B10E-448849B72C13}"
               SQLTask:SqlStatementSource="Declare @DATA nvarchar(max) = @param1&#xA;&#xA;EXEC usp_SSISLoadMatterActuals @DATA" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="@param1"
@@ -1081,7 +1053,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:CreationName=""
           DTS:DTSID="{37A22AD5-2426-42AB-9EE5-79C8962BEC50}"
           DTS:EvalOp="3"
-          DTS:Expression="DATEDIFF( &quot;mi&quot;, GETDATE() , @[User::TokenExpirationDate] ) &lt;= 5 ||  @[User::ResponceStatus] == &quot;TimedOut&quot;"
+          DTS:Expression="DATEDIFF( &quot;mi&quot;, GETDATE() , @[User::TokenExpirationDate] ) &lt;= 5"
           DTS:From="Package\For Loop Container\Access Token Validation"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
@@ -1099,7 +1071,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:CreationName=""
           DTS:DTSID="{bd6a876c-d0e3-4991-9779-7f35c25433d2}"
           DTS:EvalOp="3"
-          DTS:Expression="@[User::JSON_Data] !=&quot;&quot;"
+          DTS:Expression="@[User::JSON_Data] !=&quot;&quot; &amp;&amp;  @[User::ResponceStatus] == &quot;OK&quot;"
           DTS:From="Package\For Loop Container\Get JSON Data"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 2"
@@ -1156,7 +1128,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A7F847B5-1F7E-4F0D-8CF6-2D03E65D30CC}"
+          SQLTask:Connection="{FFC49ADA-D742-4D20-B10E-448849B72C13}"
           SQLTask:SqlStatementSource="DECLARE @MaxDateTime nvarchar(max) &#xA;SELECT &#xA; @MaxDateTime = convert(nvarchar(max),ISNULL(MAX(ProjTransDate),'2017-06-01 12:00:000'),20 )&#xA;FROM [dbo].[MattersActuals1]&#xA;&#xA;DELETE FROM [dbo].[MattersActuals1] WHERE ProjTransDate = @MaxDateTime&#xA;&#xA;SELECT @param1 = CONCAT((REPLACE(@MaxDateTime,' ','T')),'Z')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="@param1"
@@ -1180,7 +1152,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A7F847B5-1F7E-4F0D-8CF6-2D03E65D30CC}"
+          SQLTask:Connection="{FFC49ADA-D742-4D20-B10E-448849B72C13}"
           SQLTask:SqlStatementSource="SELECT &#xA;&#x9;@paramaccesstoken = [ConnectionToken],&#xA;&#x9;@paramrefreshtoken = [RefreshToken], &#xA;&#x9;@paramexpirationdate = [ConnectionTokenExpirationDate]&#xA;FROM &#xA;&#x9;[dbo].[OAuth2] &#xA;WHERE &#xA;&#x9;[InstanceName] = 'TEST01'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="@paramaccesstoken"
