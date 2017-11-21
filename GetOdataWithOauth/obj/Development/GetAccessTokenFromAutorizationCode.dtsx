@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/9/2017 1:06:26 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="FFWLON-D13BZS"
+  DTS:CreatorName="FFWUK\HK2"
+  DTS:DTSID="{94ACC755-4072-42F0-8343-AB5F90F3EBE1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.0800.90"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="GetAccessTokenFromAutorizationCode"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{543C9E76-AC4B-451B-A4B9-A45E323C4258}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F4A4D10C-37C2-4E79-B4F6-E58376DAA4AD}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::ppAccessCode]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AuthorizationCode">
+      <DTS:VariableValue
+        DTS:DataType="8">AQABAAIAAABHh4kmS_aKT5XrjzxRAtHzQLuczGqNN6M-Mwd3UiP-StdFV_ZOy507PRJvvDdC8UpFWGH5lLNmzm0B1sK_VDg1VEysjCCYUCAzctSKFtSJT0LavtM1ffDy7eK0rHZ4qIyY_Yq-aUkI0pZyTi7bsiaXHcjpChhniDBU89ttHCUHa0hLF8EeAiwQ5D_w0WDITy-Dr9K3IXZ9GqrlePfKvpSBVQ8bzHRilYwXti6Fq9XTbmGYsbPHfnPGmSSD43umACn8Sw93-jGNWo2fGS5td84JGLr2IcTCUBowpMEXjg5Z0oDs3n6COMLYV5z9WJx4aWMpAggykPQ4J6LDPJYkqeHaZrwNLQsupIIqMcuQqf_OwR9Zo9k6sT7GriTgdDnAe54Dqhl1uwUtCBw0sFlZJsy968an8e3Zy7PrJdxxiofb9xzxcm8ghkl2kHXGjX_SvH-7ZaU1YiTeApQ1CkIZ_wn764b0SMzgUyim7e57Yuw13u25cU3xGkjc3hxVtdO_DchaObKH2ppu5Qk9Dsi_cG6MusPvrBmGkILviMOzruL6w3iqW5BCyF34PYByAnbzDjQFZeQewhbnZtbSc9fFs-labmxmiHQ05byhlaJa-nRnblk6eZxISPsym6mq9mlTCgmwr0lnuEiN_mtP78GmoUul7oKv_q6BBIZ_WrZBOdkxBBJBfSeQ3mmkv25HCZ2UEUIgAA</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables />
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
